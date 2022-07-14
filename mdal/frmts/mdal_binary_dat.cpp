@@ -15,6 +15,7 @@
 #include <memory>
 
 #include "mdal_binary_dat.hpp"
+#include "mdal_2dm.hpp"
 #include "mdal.h"
 #include "mdal_utils.hpp"
 #include "mdal_logger.hpp"

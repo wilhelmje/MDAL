@@ -34,6 +34,13 @@ namespace MDAL
       std::string writeDatasetOnFileSuffix() const override;
 
     private:
+
+      //! Gets maximum (native) index.
+      //! For meshes without indexing gap it is vertexCount - 1
+      //! For some HYDRO_AS-2D meshes with indexing gaps, it returns
+      //! maximum native index of the vertex in defined in the mesh
+      size_t maximumId( const Mesh *mesh ) const;
+
       bool readVertexTimestep( const Mesh *mesh,
                                std::shared_ptr<DatasetGroup> group,
                                std::shared_ptr<DatasetGroup> groupMax,
